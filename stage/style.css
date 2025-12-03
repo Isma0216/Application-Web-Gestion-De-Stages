@@ -1,0 +1,258 @@
+/* === Global === */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #1d72b8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === Container === */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* === Headings === */
+h1, h2, h3, h4 {
+    color: #1d72b8;
+}
+
+/* === Forms === */
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #1d72b8;
+    outline: none;
+}
+
+input[type="submit"],
+button {
+    background: #1d72b8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: #155a8a;
+}
+
+/* === Buttons styles === */
+.btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background: #1d72b8;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #155a8a;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    background: #28a745;
+    color: #fff;
+    border-radius: 6px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-small:hover {
+    background: #1e7e34;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #6c757d;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* === Logout button === */
+.logout-btn {
+    float: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* === Messages === */
+.error {
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+}
+
+.success {
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+}
+
+.info {
+    padding: 10px;
+    background: #e2e3e5;
+    color: #383d41;
+    border-radius: 6px;
+}
+
+/* === Compte rendu cards === */
+.cr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cr-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cr-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.cr-card.vu {
+    border-left: 5px solid #28a745;
+}
+
+.cr-card.non-vu {
+    border-left: 5px solid #dc3545;
+}
+
+.cr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cr-date {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.cr-description {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.cr-status {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* === Commentaires === */
+.comment-section {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.comment-box {
+    background: #f1f3f5;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.comment-form textarea {
+    resize: vertical;
+}
+
+/* === Tables (liste comptes rendus classique) === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background: #1d72b8;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+    .cr-grid {
+        grid-template-columns: 1fr;
+    }
+}

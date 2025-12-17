@@ -10,4 +10,5 @@ L'application permet aux éléves d'entrer chaque jour le rapport de la journée
 COMPTE TEST :
 
 login : admin  |  login : prof   |  login : eleve
+
 mdp : admin    |  mdp : prof     |  mdp : eleve
